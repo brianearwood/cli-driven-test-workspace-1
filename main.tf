@@ -3,22 +3,22 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 5.0"
+      version = "~> 6.18"
     }
-    doormat = {
-      source  = "doormat.hashicorp.services/hashicorp-security/doormat"
-      version = "~> 0.0.2"
-    }
+    # doormat = {
+    #   source  = "doormat.hashicorp.services/hashicorp-security/doormat"
+    #   version = "~> 0.0.2"
+    # }
   }
 }
 
-# Configure the Doormat Provider
-provider "doormat" {}
+# # Configure the Doormat Provider
+# provider "doormat" {}
 
-data "doormat_aws_credentials" "creds" {
-  provider = doormat
-  role_arn = "arn:aws:iam::886363944443:role/Terraform-OIDC-2"
-}
+# data "doormat_aws_credentials" "creds" {
+#   provider = doormat
+#   role_arn = "arn:aws:iam::886363944443:role/Terraform-OIDC-2"
+# }
 
 # Configure the AWS Provider
 provider "aws" {
