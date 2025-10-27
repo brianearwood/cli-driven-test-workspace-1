@@ -18,7 +18,7 @@ provider "doormat" {}
 data "doormat_aws_credentials" "creds" {
   provider = doormat
 
-  role_arn = "arn:aws:iam::886363944443:oidc-provider/app.terraform.io"
+  role_arn = "arn:aws:iam::886363944443:role/Terraform-OIDC"
 }
 
 # Configure the AWS Provider
